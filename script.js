@@ -25,18 +25,16 @@ message.addEventListener("input", () => {
    console.log("Message=>", msg);
  
    if (firstName && lastName && email && msg) {
-    // Successful form submission
     responseDiv.innerHTML = `<p>Thank you! <b>${firstName} ${lastName}</b>! Your message has been received.</p>`;
-    responseDiv.style.display = "block"; // Make it visible
-    form.reset(); // Clear the form
-    characterCount.textContent = "Characters: 0"; // Reset character count
+    responseDiv.style.display = "block"; e
+    form.reset(); 
+    characterCount.textContent = "Characters: 0"; 
 } else {
-    // Display error message if form is incomplete
     responseDiv.innerHTML = `<p style="color: red;">Please fill in all fields.</p>`;
-    responseDiv.style.display = "block"; // Make error message visible
+    responseDiv.style.display = "block"; 
 }
 
-// Button effect (visual feedback)
+
 const submitButton = document.querySelector('button');
 submitButton.classList.add("clicked");
 
